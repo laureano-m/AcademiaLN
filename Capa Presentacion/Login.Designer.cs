@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.LoginBox = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelUsuario = new System.Windows.Forms.Label();
-            this.labelContraseña = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnIngresar = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnIngresar = new FontAwesome.Sharp.IconButton();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.labelContraseña = new System.Windows.Forms.Label();
+            this.labelUsuario = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,29 +53,94 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(153)))), ((int)(((byte)(190)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnIngresar);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtClave);
+            this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.labelContraseña);
             this.panel1.Controls.Add(this.labelUsuario);
             this.panel1.Controls.Add(this.LoginBox);
-            this.panel1.Location = new System.Drawing.Point(4, 7);
+            this.panel1.Location = new System.Drawing.Point(4, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 692);
+            this.panel1.Size = new System.Drawing.Size(876, 687);
             this.panel1.TabIndex = 2;
             // 
-            // labelUsuario
+            // label1
             // 
-            this.labelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(236)))), ((int)(((byte)(252)))));
-            this.labelUsuario.Font = new System.Drawing.Font("SAPGUI-Belize-Icons", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.labelUsuario.Location = new System.Drawing.Point(311, 235);
-            this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelUsuario.Size = new System.Drawing.Size(100, 20);
-            this.labelUsuario.TabIndex = 2;
-            this.labelUsuario.Text = "Usuario";
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(236)))), ((int)(((byte)(252)))));
+            this.label1.Location = new System.Drawing.Point(176, 145);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(532, 47);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Academia LN";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("SAPGUI-Belize-Icons", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(236)))), ((int)(((byte)(252)))));
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSalir.IconColor = System.Drawing.Color.Black;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.Location = new System.Drawing.Point(506, 403);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 35);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresar.Font = new System.Drawing.Font("SAPGUI-Belize-Icons", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(236)))), ((int)(((byte)(252)))));
+            this.btnIngresar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnIngresar.IconColor = System.Drawing.Color.Black;
+            this.btnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIngresar.Location = new System.Drawing.Point(311, 403);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(75, 35);
+            this.btnIngresar.TabIndex = 6;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
+            // txtClave
+            // 
+            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(153)))), ((int)(((byte)(190)))));
+            this.txtClave.Location = new System.Drawing.Point(311, 346);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtClave.Size = new System.Drawing.Size(270, 20);
+            this.txtClave.TabIndex = 5;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(153)))), ((int)(((byte)(190)))));
+            this.txtUsuario.Location = new System.Drawing.Point(311, 270);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtUsuario.Size = new System.Drawing.Size(270, 20);
+            this.txtUsuario.TabIndex = 4;
             // 
             // labelContraseña
             // 
@@ -88,61 +154,23 @@
             this.labelContraseña.TabIndex = 3;
             this.labelContraseña.Text = "Contraseña";
             // 
-            // textBox1
+            // labelUsuario
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(153)))), ((int)(((byte)(190)))));
-            this.textBox1.Location = new System.Drawing.Point(311, 270);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(153)))), ((int)(((byte)(190)))));
-            this.textBox2.Location = new System.Drawing.Point(311, 346);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(270, 20);
-            this.textBox2.TabIndex = 5;
+            this.labelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(236)))), ((int)(((byte)(252)))));
+            this.labelUsuario.Font = new System.Drawing.Font("SAPGUI-Belize-Icons", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
+            this.labelUsuario.Location = new System.Drawing.Point(311, 235);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelUsuario.Size = new System.Drawing.Size(100, 20);
+            this.labelUsuario.TabIndex = 2;
+            this.labelUsuario.Text = "Usuario";
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("SAPGUI-Belize-Icons", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(236)))), ((int)(((byte)(252)))));
-            this.btnIngresar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnIngresar.IconColor = System.Drawing.Color.Black;
-            this.btnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIngresar.Location = new System.Drawing.Point(311, 403);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 35);
-            this.btnIngresar.TabIndex = 6;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("SAPGUI-Belize-Icons", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(236)))), ((int)(((byte)(252)))));
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSalir.IconColor = System.Drawing.Color.Black;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.Location = new System.Drawing.Point(506, 403);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 35);
-            this.btnSalir.TabIndex = 7;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
@@ -151,8 +179,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(55)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(884, 711);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
@@ -164,13 +194,14 @@
         #endregion
         private System.Windows.Forms.Label LoginBox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label labelContraseña;
         private System.Windows.Forms.Label labelUsuario;
         private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnIngresar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

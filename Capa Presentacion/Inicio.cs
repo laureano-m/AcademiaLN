@@ -31,5 +31,10 @@ namespace Capa_Presentacion
         {
 
         }
+
+        private void menuStrip4_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

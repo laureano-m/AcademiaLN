@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Capa_BE
 {
-    public class Class1
+    public class Administrativo
     {
+        public int IdAdmin { get; set; }
+        public int Dni { get; set; }
     }
 }
